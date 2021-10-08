@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(./navigation.css);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  position: relative;
+}
+main{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  background: #f5f5f5;
+}
+.main__activities{
+  width: 90%;
+}
+.main__title{
+  margin-bottom: 1em;
+  text-align: center;
+}
+.main__title h1{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.main__activities .loading .fas{
+  margin-right: .2em;
+}
+.workStatus{
+  text-align: center;
+  font-size: 1.3em;
+}
+.activities__activity{
+  text-decoration: none;
+  color: #000;
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1.5em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 2em;
+}
+.activity__teacher{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+.activity__teacher h3{
+  font-weight: 500;
+}
+.activity__date h5{
+  font-weight: 500;
+  text-align: right;
+}
+.activity__about p{
+  text-align: justify;
+}
+.activity_file{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.8em;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.activity_file span .fas{
+  margin-right: 0.5em;
+}
+.activity_file span:nth-child(2) .fas{
+  font-size: 1.2em;
+}
+.activity__type{
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  width: 10%;
+  height: 35px;
+  border-radius: 60%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity__type :where(.fas, .far){
+  display: block;
+}
+.activity__type#Aviso{
+  background: #01579b;
+}
+.activity__type#Tarea{
+  background: #f44336;
+}
+.activity__title-date{
+  display: flex;
+  flex-wrap: wrap;
+}
+.activity__title-date span{
+  display: block;
+  text-align: right;
+  width: 100%;
+  order: -1;
+}
+@media screen and (min-width: 768px){
+  .workStatus{
+    text-align: left;
+  }
+  .activity__type{
+    width: 6%;
+    height: 40px;
+    top: -15px;
+    left: -15px;
+  }
+  .activity__type :where(.fas, .far){
+    font-size: 1.2em;
+  }
+  .activity__title-date{
+    align-items: center;
+    justify-content: space-between;
+  }
+  .activity__title-date span{
+    width: auto;
+    order: unset;
+  }
+}
+@media screen and (min-width: 992px){
+  main {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1200px){
+  main {
+    width: 80%;
+  }
+  .main__activities{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main__activities .loading,
+  .workStatus{
+    align-self: flex-start;
+  }
+  .activities__activity{
+    width: 90%;
+  }
+  .activity__type{
+    left: -20px;
+  }
+}

@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(./navigation.css);
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  position: relative;
+}
+.workStatus
+{
+  text-align: center;
+  font-size: 1.3em;
+}
+main
+{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  background: #f5f5f5;
+}
+.main__add
+{
+  display: flex;
+  align-items: center;
+  color: #616161;
+  cursor: pointer;
+  margin-bottom: 0.8em;
+}
+.add__text
+{
+  margin-right: 0.4em;
+}
+.add__text h3
+{
+  font-weight: 500;
+}
+.add__icon
+{
+  padding: 0.4em 0.5em;
+  border: 1px solid #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-activity-back.active body
+{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.add-activity-back,
+.edit-homework-back,
+.delete-homework-back
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0;
+}
+.add-activity-back.active,
+.edit-homework-back.active,
+.delete-homework-back.active
+{
+  display: flex;
+}
+.container-activity-add
+{
+  background: #fff;
+  width: 90%;
+  padding: 1em;
+  border: 2px solid #aaa;
+}
+.container-activity-add h3
+{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.activity-add__title
+{
+  margin: 0.5em 0;
+}
+.activity-add__about
+{
+  margin: .5em 0;
+}
+:is(.activity-add__title, .activity__due-to) input,
+.activity-add__about textarea,
+.activity__type-work select
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  outline: none;
+  border: 1px solid #aaa;
+  padding: 0.2em;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 220px;
+  color: #464343;
+}
+:is(.activity-add__title, .activity__due-to) input:focus, 
+.activity-add__about textarea:focus
+{
+  border-color: #76787a;
+}
+.activity-add__due-type{
+  display: flex;
+  justify-content: space-between;
+} 
+.activity__due-to{
+  width: 48%;
+}
+.activity__type-work{
+  width: 48%;
+}
+.activity-add__buttons
+{
+  width: 100%;
+}
+.activity-add__buttons input[type="submit"],
+.activity-add__buttons input[type="button"],
+.activity-delete__buttons input[type="submit"],
+.activity-delete__buttons input[type="button"]
+{
+  width: 49%;
+  border: none;
+  padding: 0.4em;
+  font-size: 1em;
+  cursor: pointer;
+  color: #fff;
+}
+.activity-add__buttons input[type="submit"]#asignar,
+.activity-delete__buttons input[type="submit"]#delete
+{
+  background-color: #388e3c; 
+  margin-right: 0.1em;
+}
+.activity-add__buttons input[type="button"]#cancelar,
+.activity-delete__buttons input[type="button"]#cancelar
+{
+  background-color: #f44336; 
+}
+.activity-add__file
+{
+  margin: 0.8em 0 0.4em 0;
+  width: 100%;
+}
+.activity-add__file input[type="file"]
+{
+  display: none;
+}
+.activity-add__file label
+{
+  display: inline-block;
+  width: 49%;
+  background: #01579b;
+  color: #fff;
+  padding: 0.5em 0.7em;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0.4em;
+}
+.activity-add__file label .fas
+{
+  margin-right: 0.4em;
+}
+.activity-add__file span .far
+{
+  cursor: pointer;
+  display: inline-block;
+  color: #f44336;
+  margin-right: 0.3em;
+}
+/* Tareas */
+.main__title
+{
+  margin-bottom: 1em;
+  text-align: center;
+}
+.main__title h1
+{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.main__activities{
+  width: 90%;
+}
+.activities__activity
+{
+  position: relative;
+  width: 100%;
+  padding: 1.5em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 6em;
+}
+.activity__teacher
+{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+.activity__teacher h3
+{
+  font-weight: 500;
+}
+.activity__date h5
+{
+  font-weight: 500;
+  text-align: right;
+}
+.activity__about p
+{
+  text-align: justify;
+}
+.activity__modify
+{
+  position: absolute;
+  right: 0;
+  bottom: -41px;
+  display: flex;
+}
+.activity_file
+{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.8em;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.activity_file span .fas
+{
+  margin-right: 0.5em;
+}
+.activity_file span:nth-child(2) .fas
+{
+  font-size: 1.2em;
+}
+.activity__edit,
+.activity__drop
+{
+  color: #fff;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+}
+.activity__edit
+{
+  background: #388e3c;
+}
+.activity__drop
+{
+  background: #f44336;
+} 
+.container-activity-delete
+{
+  background: #fff;
+  width: 90%;
+  padding: 1em;
+  border: 2px solid #aaa;
+}
+.activity-delete__buttons
+{
+  margin-top: 1em;
+}
+.activity__type{
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  width: 10%;
+  height: 35px;
+  border-radius: 60%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity__type :where(.fas, .far){
+  display: block;
+}
+.activity__type#Aviso{
+  background: #01579b;
+}
+.activity__type#Tarea{
+  background: #f44336;
+}
+
+@media screen and (min-width: 550px)
+{
+  .container-activity-delete
+  {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px)
+{
+  .workStatus
+  {
+    text-align: left;
+  }
+  .main__add
+  {
+    align-self: flex-end;
+    margin: 0.5em 3em 1em 0;
+  }
+  .container-activity-add
+  {
+    width: 70%;
+  }
+  .container-activity-delete
+  {
+    width: 50%;
+  }
+  .activity__type{
+    width: 6%;
+    height: 40px;
+    top: -15px;
+    left: -15px;
+  }
+  .activity__type :where(.fas, .far){
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 992px){
+  main 
+  {
+    width: 75%;
+  }
+  .container-activity-add
+  {
+    width: 60%;
+  }  
+  .container-activity-delete
+  {
+    width: 40%;
+  }
+  .main__activities
+  {
+    width: 75%;
+  }
+  .activities__activity
+  {
+    margin-bottom: 3.5em;
+  }
+  .activity__modify
+  {
+    flex-direction: column;
+    bottom: unset;
+    top: 0;
+    right: -41px;
+  }
+}
+@media screen and (min-width: 1200px)
+{
+  main 
+  {
+    width: 80%;
+  }
+  .container-activity-add
+  {
+    width: 40%;
+  }
+  .main__title
+  {
+    font-size: 1.3em;
+  }
+  .container-activity-delete
+  {
+    width: 30%;
+  }
+  .activity__type{
+    left: -20px;
+  }
+}

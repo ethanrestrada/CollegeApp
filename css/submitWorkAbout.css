@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(./navigation.css);
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  position: relative;
+}
+main{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  background: #f5f5f5;
+}
+.activity-container{
+  width: 90%;
+}
+.activity__title{
+  width: 100%;
+  text-align: center;
+}
+.activity__title h1{
+  font-size: 1.5em;
+}
+.activity__about{
+  width: 100%;
+}
+.activity__about p{
+  text-align: justify;
+}
+.activity__about span{
+  display: block;
+}
+.activity__date{
+  width: 100%;
+  text-align: left;
+  margin: .5em 0;
+}
+.activity__file{
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000;
+  padding: .8em;
+  margin-top: .5em;
+}
+.activity__file span .fas
+{
+  margin-right: 0.5em;
+}
+.activity__file span:nth-child(2) .fas
+{
+  font-size: 1.2em;
+}
+.activity__upload-file{
+  width: 100%;
+  position: relative;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.activity__upload-file form{
+  width: 100%;
+}
+.activity__upload-file input[type="file"]{
+  display: none;
+}
+.activity__upload-file label{
+  width: 20%;
+  cursor: pointer;
+  padding: .5em 1em;
+  background: #eee;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.activity__upload-file .far{
+  margin-right: .5em;
+}
+.file-name{
+  margin-top: 1.5em;
+  padding-top: 1em;
+  position: relative;
+}
+.file-name::before{
+  content: "";
+  width: 90%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.file-name span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.file-name span .fas{
+  margin-right: .5em;
+}
+.file-name span.active{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: .5em 1em;
+}
+.file-name .far{
+  display: block;
+  color: #f44336;
+  cursor: pointer;
+}
+.upload-file{
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.upload-file input[type="submit"]{
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  padding: .5em 1em;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.upload-file input[type="submit"]#undo{
+  background: #f44336;
+}
+.upload-file input[type="submit"]#entregar{
+  background: #01579b;
+}
+.turnin_at{
+  margin-bottom: 1em;
+}
+.activity__upload-file label.entregado{
+  display: none;
+}
+.activity__upload-file label.entregado ~ .file-name{
+  margin-top: 0;
+}
+.activity__upload-file label.entregado ~ .file-name .far#deleteFile2{
+  display: none;
+}
+@media screen and (min-width: 768px){
+  .activity-container{
+    width: 80%;
+  }
+  .upload-file{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .upload-file input[type="submit"]{
+    width: unset;
+  }
+  .turnin_at{
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 992px){
+  main {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1200px){
+  main {
+    width: 80%;
+  }
+  .activity-container{
+    width: 70%;
+  }
+}

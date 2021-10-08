@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.delete-back,
+.modify-table-back,
+.add-user-back{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0;
+}
+.delete-back.active,
+.modify-table-back.active,
+.add-user-back.active{
+  display: flex;
+}
+.delete__container-delete,
+.modify__container-modify,
+.add__container-add{
+  background: #fff;
+  width: 90%;
+  padding: 1em;
+  border: 2px solid #aaa;  
+}
+.container-delete__title{
+  margin-bottom: 0.7em;
+}
+.container-delete__title h3,
+.container-add__title h3{
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+}
+.container-delete__content{
+  margin-bottom: 1.2em;
+}
+.container-delete__content h5{
+  font-weight: 400;
+}
+.container-delete__buttons{
+  width: 100%;
+}
+:is(.container-delete__buttons, .container-modify__buttons, .container-add__buttons) 
+:where(input[type="submit"], input[type="button"]){
+  width: 49%;
+  border: none;
+  padding: 0.4em;
+  font-size: 1em;
+  cursor: pointer;
+  color: #fff;
+}
+.container-delete__buttons #aceptarDelete,
+.container-modify__buttons #aceptarModify,
+.container-add__buttons #aceptarAdd{
+  background: #388e3c;
+}
+.container-delete__buttons #cancelarDelete,
+.container-modify__buttons #cancelarModify,
+.container-add__buttons #cancelarAdd{
+  background: #f4372a;
+}
+.container-modify__title h3{
+  text-align: center;
+  font-weight: 500;
+}
+.container-modify__name,
+.container-modify__apellido{
+  margin: 0.5em 0;
+}
+.container-modify__codigo,
+.container-add__code{
+  margin-bottom: 1em;
+}
+.modify__container-modify input[type="text"],
+.add__container-add input[type="text"]{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  outline: none;
+  border: 1px solid #aaa;
+  padding: 0.2em;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 300px;
+  color: #464343;
+}
+.container-add__title{
+  margin-bottom: .5em;
+}
+.email-input{
+  display: flex;
+}
+.email-input input[type="text"]{
+  min-width: 65%; 
+  max-width: 65%; 
+}
+.email-input span{
+  border: 1px solid #aaa;
+  border-left: none;
+  padding: .2em;
+  width: 35%;
+  text-align: center;
+}
+:is(.modify__container-modify, .add__container-add) input[type="text"]:focus{
+  border-color: #76787a;
+}
+.container-modify__buttons,
+.container-add__buttons{
+  width: 100%; 
+}
+main{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  background: #f5f5f5;
+}
+.main__title{
+  margin-bottom: 1em;
+  text-align: center;
+}
+.main__title h3{
+  font-weight: 500;
+}
+.main__add-user{
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+}
+.add-user__container{
+  display: flex;
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 1.3em;
+}
+.add-user__icon{
+  padding: 0.4em 0.5em;
+  margin-right: 0.4em;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-user__icon .fas{
+  display: block;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.add-user__text h3{
+  font-weight: 500;
+  font-size: 1em;
+}
+.main__users{
+  width: 90%;
+}
+.userContainer,
+.userContainerStudent{
+  width: 100%;
+  box-shadow: 0 1px 1px 0 rgba(100, 98, 98, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+  padding: 0 1em;
+}
+.userContainer div,
+.userContainerStudent span{
+  padding: 1em 0;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+}
+.userContainerStudent span{
+  width: 100%;
+}
+.userButtons{
+  display: flex;
+}
+.userButtons button{
+  border: none;
+  padding: 0.8em;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 2px;
+  text-decoration: none;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.userButtons button.edit{
+  background: #388e3c;
+  margin-right: 0.6em;
+}
+.userButtons button.delete {
+  background: #f4372a;
+}
+.userButtons button .fas{
+  display: block;
+}
+@media screen and (min-width: 768px){
+  .delete__container-delete,
+  .modify__container-modify,
+  .add__container-add{
+    width: 70%;
+  }
+  .container-delete__title h3{
+    font-size: 1.4em;
+  }
+  .container-delete__content h5{
+    font-size: 1.1em;
+  }
+  .main__title h3 {
+    font-size: 1.5em;
+  }
+  .main__add-user{
+    width: 90%;
+  }
+  .userButtons button .fas{
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 992px){
+  .delete__container-delete,
+  .modify__container-modify,
+  .add__container-add{
+    width: 50%;
+  }
+  main {
+    width: 75%;
+  } 
+  .add-user__text h3{
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1200px){
+  .delete__container-delete,
+  .modify__container-modify,
+  .add__container-add{
+    width: 35%;
+  }
+  main{
+    width: 80%;
+  }
+}

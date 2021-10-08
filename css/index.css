@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  background: url(../img/backgroundindex.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.college_name
+{
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+}
+.back{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  z-index: 1000;
+}
+.container
+{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  padding: 2em;
+  margin-top: -2.2em;
+}
+.container__img
+{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.container__img img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+form
+{
+  width: 100%;
+  margin: auto;
+}
+.form__input
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #616161;
+}
+.input__icon
+{
+  color: #616161;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.input__icon .fas
+{
+  transition: 0.3s;
+}
+.form__input > div
+{
+  position: relative;
+	height: 45px;
+}
+.input__text h5
+{
+  position: absolute;
+  left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #616161;
+	font-size: 18px;
+	transition: .3s;
+}
+.form__input::before, 
+.form__input::after
+{
+  content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background: #0c243e;
+	transition: 0.4s;
+}
+.form__input::before
+{
+  right: 50%;
+}
+.form__input::after
+{
+  left: 50%;
+}
+.input__text input
+{
+  position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #555;
+	font-family: 'Poppins', sans-serif;
+}
+.form__input.focus .fas
+{
+  color: #0c243e;
+}
+.form__input.focus h5
+{
+  top: -5px;
+	font-size: 15px;
+}
+.form__input.focus::before,
+.form__input.focus::after
+{
+  width: 50%;
+}
+input[type="submit"]
+{
+  width: 100%;
+  border: none;
+  background: #0c243e;
+  color: #fff;
+  padding: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .college_name
+  {
+    right: 20px;
+    bottom: 20px;
+  }
+  .back
+  {
+    width: 60%;
+  }
+  .container__img
+  {
+    height: 120px;
+    width: 120px;
+  }
+}
+@media screen and (min-width: 992px)
+{
+  .back
+  {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px)
+{
+  body
+  {
+    background: url(../img/backgroundindexresponsive.jpg);
+  }
+  .back
+  {
+    width: 30%;
+  }
+}

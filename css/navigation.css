@@ -1,0 +1,194 @@
+header
+{
+  background: #0c243e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+}
+.header__menu-toggle
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__menu-toggle .fas
+{
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.header__college-logo
+{
+  display: none;
+  position: relative;
+  height: 45px;
+  width: 80px;
+}
+.header__college-logo img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header__user-options
+{
+  max-width: 90%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+.header__user-options h5
+{
+  display: inline;
+  margin-right: 0.8em;
+}
+.header__user-options .fas
+{
+  font-size: 1.3em;
+  cursor: pointer;
+}
+header a
+{
+  text-decoration: none;
+  color: #fff;
+} 
+header a .fas{
+  font-size: 1.5em;
+}
+/* Side Menu */
+.menu-options
+{
+  position: fixed;
+  top: 70px;
+  height: 100vh;
+  width: 100%;
+  background: #0c243e;
+  border-top: 1px solid #ddd;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  z-index: 100;
+}
+.menu-options.active
+{
+  transform: translate(0%);
+}
+.menu-options ul
+{
+  width: 100%;
+  margin-top: 1.2em;
+}
+.menu-options ul li
+{
+  position: relative;
+  list-style: none;
+  padding: 1em;
+  width: 100%;
+}
+.menu-options ul li a
+{
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+}
+.menu-options ul li a .option__icon
+{
+  width: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8em;
+}
+.menu-options ul li a .option__icon .fas
+{
+  font-size: 1.5em;
+}
+.menu-options ul li a .option__title
+{
+  width: 22%;
+}
+.menu-options ul li h3
+{
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.menu-options ul li:last-child
+{
+  margin-top: 0.5em;
+}
+.menu-options ul li.active,
+.menu-options ul li:hover 
+{
+  background: #113255;
+}
+@media screen and (min-width: 768px)
+{
+  header
+  {
+    font-size: 1.2em;
+  }
+  header.chat
+  {
+    justify-content: space-between;
+  }
+  .menu-options ul li a
+  {
+    font-size: 1.2em;
+  }
+  .header__college-logo.chat
+  {
+    display: flex;
+  }
+}
+@media screen and (min-width: 992px)
+{
+  header{
+    border-bottom: 2px solid #f00;
+  }
+  .header__college-logo{
+    display: block;
+  }
+  .header__menu-toggle
+  {
+    display: none;
+  }
+  .menu-options
+  {
+    transform: translate(0%);
+    width: 25%;
+    border: none;
+  }
+  .menu-options ul li a
+  {
+    padding-left: 0.8em;
+    justify-content: flex-start;
+  }
+  .menu-options ul li a .option__icon .fas
+  {
+    font-size: 1.2em;
+  }
+  .menu-options ul li a .option__title
+  {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 1200px)
+{
+  .menu-options
+  {
+    width: 20%;
+  }
+}
