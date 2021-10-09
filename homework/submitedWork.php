@@ -7,7 +7,8 @@ $id_grado = $_POST['id_grado'];
 
 $query = mysqli_query($mysqli, "SELECT alumnos.id, alumnos.nombre, alumnos.apellido FROM entregas
                                 JOIN alumnos ON alumnos.id = entregas.id_alumno
-                                WHERE entregas.id_tarea = $id_tarea AND entregas.estado = 'entregado'");
+                                WHERE entregas.id_tarea = $id_tarea AND entregas.estado = 'entregado'
+                                AND alumnos.estado = 'activo'");
 if($query){
   if(mysqli_num_rows($query) > 0){
     echo '<h1 class="workStatus">Entregas: </h1>';

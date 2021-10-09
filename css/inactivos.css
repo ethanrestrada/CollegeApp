@@ -87,6 +87,8 @@ main
 }
 .student-about span:first-child{
   font-weight: 600;
+}
+.student-about span{
   white-space: nowrap;
 }
 .active-icon{
