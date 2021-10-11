@@ -139,7 +139,7 @@ main
 .activity-delete__buttons input[type="submit"],
 .activity-delete__buttons input[type="button"]
 {
-  width: 49%;
+  width: 48.5%;
   border: none;
   padding: 0.4em;
   font-size: 1em;
@@ -169,7 +169,8 @@ main
 .activity-add__file label
 {
   display: inline-block;
-  width: 49%;
+  min-width: 49%;
+  max-width: 65%;
   background: #01579b;
   color: #fff;
   padding: 0.5em 0.7em;
@@ -192,7 +193,6 @@ main
 .main__title
 {
   margin-bottom: 1em;
-  text-align: center;
 }
 .main__title h1
 {

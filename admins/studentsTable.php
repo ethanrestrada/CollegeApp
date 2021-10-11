@@ -145,7 +145,7 @@
     <div class="delete__container-delete">
       <form action="" method="post">
         <div class="container-delete__title">
-          <h3>¿Estas seguro que quieres eliminar al maestro de la lista?</h3>
+          <h3>¿Estas seguro que quieres eliminar al alumno de la lista?</h3>
           <input type="hidden" name="idUserDelete" id="idUserDelete">
         </div>
         <div class="container-delete__content">

@@ -10,7 +10,7 @@ body {
   position: relative;
 }
 .container-chat{
-  position: absolute;
+  position: relative;
   top: 70px;
   left: 0;
   display: flex;
